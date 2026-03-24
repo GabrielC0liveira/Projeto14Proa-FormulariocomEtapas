@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/img/fundo.jpg);
+    background-size: 1300px;
+    background-position: center;
+}
+.container{
+    width: 360px;
+    height: 440px;
+    background: #fff;
+    margin: 8% auto;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+h3{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #777;
+}
+.container form{
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    transition: 0.5s;
+}
+form input{
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 5px;
+    border: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+::placeholder{
+    color: #777;
+}
+.btncaixa{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+form button{
+    width: 110px;
+    height: 45px;
+    margin: 0 10px;
+    border: 0;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+#form2{
+    left: 450px;
+}
+#form3{
+    left: 450px;
+}
+.steprow{
+    width: 360px;
+    height: 40px;
+    position: relative;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    margin: 0 auto;
+    display: flex;
+}
+.col{
+    width: 120px;
+    text-align: center;
+    position: relative;
+    color: #333;
+}
+#progresso{
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    transition: 1s;
+}
+#progresso::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    height: 0;
+    border-left: 20px solid #ffad06;
+}

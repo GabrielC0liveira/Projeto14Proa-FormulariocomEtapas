@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Projeto14-Formulário com várias etapas</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <h3>Crie sua Conta</h3>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <input type="password" placeholder="Confirmar Senha" required>
+
+            <div class="btncaixa">
+                <button type="button" id="prox1">Próximo</button>
+            </div>
+        </form>
+
+        <form id="form2">
+            <h3>Redes Sociais</h3>
+            <input type="text" placeholder="Medium" >
+            <input type="password" placeholder="Github" >
+            <input type="password" placeholder="Linkedin" >
+
+            <div class="btncaixa">
+                <button type="button" id="vol1">Voltar</button>
+                <button type="button" id="prox2">Próximo</button>
+            </div>
+        </form>
+
+        <form id="form3">
+            <h3>Informações Pessoais</h3>
+            <input type="text" placeholder="Nome" required>
+            <input type="password" placeholder="Sobrenome" required>
+            <input type="password" placeholder="Celular" required>
+
+            <div class="btncaixa">
+                <button type="button" id="vol2">Voltar</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+        <div class="steprow">
+            <div id="progresso"></div>
+            <div class="col"><small>Passo 1</small></div>
+            <div class="col"><small>Passo 2</small></div>
+            <div class="col"><small>Passo 3</small></div>
+        </div>
+    </div>
+
+    <script>
+        var form1 = document.getElementById('form1');
+        var form2 = document.getElementById('form2');
+        var form3 = document.getElementById('form3');
+
+        var prox1 = document.getElementById('prox1');
+        var prox2 = document.getElementById('prox2');
+        var vol1 = document.getElementById('vol1');
+        var vol2 = document.getElementById('vol2');
+
+        var progresso = document.getElementById('progresso');
+
+        prox1.onclick = function() {
+            form1.style.left = '-450px';
+            form2.style.left = '40px';
+            progresso.style.width = '240px';
+        }
+        vol1.onclick = function() {
+            form1.style.left = '40px';
+            form2.style.left = '450px';
+            progresso.style.width = '120px';
+        }
+        prox2.onclick = function() {
+            form2.style.left = '-450px';
+            form3.style.left = '40px';
+            progresso.style.width = '360px';
+        }
+        vol2.onclick = function() {
+            form2.style.left = '40px';
+            form3.style.left = '450px';
+            progresso.style.width = '240px';
+        }
+    </script>
+
+
+</body>
+</html>
